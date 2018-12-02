@@ -8,7 +8,8 @@ const allowCors = require('./cors')
 const server = express()
 
 //Toda vez que chegar uma requisição quem irá fazer o parse será o body parser
-server.use(bodyParser.urlencoded({extended: true}))
+server.use(bodyParser.urlencoded({ extended: true }))
+server.use(bodyParser.json())
 
 //habilitando o middleware do cors
 server.use(allowCors)
